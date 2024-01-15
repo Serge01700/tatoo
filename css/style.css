@@ -1,4 +1,230 @@
 * {
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+#banniere {
+    background-color:#1E1E1E ;
+    justify-content: center;
+    display: flex ;
+    
+}
+
+
+
+.flex {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    
+}
+
+.menu {
+    position: absolute;
+    
+    left: 0;
+    top: 75px;
+    
+    
+    
+}
+
+.menu > ul > li > a {
+    color: rgb(255, 255, 255);
+    
+
+}
+
+
+.menu > ul > li {
+    margin : 0 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase; 
+    height: 50px;
+    color: white;
+    
+}
+
+
+.menu > .flex >  li  > ul {
+    display:none;
+    
+}
+
+.menu > .flex >  li:hover  > ul {
+    display: block;
+    position: absolute;
+    top:22px;
+    background-color: #1E1E1E;
+    width: 150px;
+    
+
+}
+.block > .art {
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    text-decoration: underline;
+    
+}
+
+.block  {
+    background-color: #cfcfcf;
+    border-radius: 5px;
+    margin: 8px;
+
+   
+}
+
+.image-container {
+    display: flex;
+    flex-direction: row; 
+     
+}
+
+.image-container img {
+    width: 50%;
+    margin-bottom: 10px; 
+    border-radius: 5px;
+}
+
+.floating {
+    font-size: 30px;
+    display:grid;
+    margin: 15px;
+    width: 45%;
+    
+    
+ }
+ 
+ h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+   text-decoration: underline;
+ }
+
+ .footer {
+    background-color: #1E1E1E ;
+    height: 145px;
+    width: 100%;
+ }
+
+ .footer-reseaux {
+    
+    justify-content: center;
+ }
+
+ .footer-reseaux img{
+    width:15px }
+
+.footer > ul > a {
+    color: white;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+   
+    
+}
+
+.footer > ul {
+    padding-top: 47px;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+
+.footer li {
+    display: inline; 
+    margin-right: 20px; 
+}
+
+
+
+.footer-reseaux {
+    display: flex;
+    align-items: center;
+}
+
+.footer-reseaux img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+ img[alt~="logo"]{
+    position: relative;
+    bottom: 59px;
+    height: 50px;
+    width: auto;
+  
+}
+
+.cont > p {
+    color: rgb(255, 255, 255);
+    position: relative;
+    bottom: 2px;
+    left: 50px;
+}
+
+
+/* Top stories rap */
+
+.block > h2 {
+    padding: 15px 0;
+    text-decoration: underline;
+}
+.block > .wayne {
+    display: flex;
+} 
+
+.floating > h6 {
+    color: white;
+    text-decoration: underline;
+}
+
+.wayne > .floating > p {
+    text-align: start;
+    margin-bottom: 150px;
+    
+}
+
+
+/* Top stories healing tattoo */
+
+section > h2  {
+    text-align: center;
+    font-style: italic ;
+    padding-top: 15px;
+   
+}
+
+hr{
+    margin : 0 100px;
+}
+
+section > p {
+    text-align: center;
+    margin: 15px 0;  
+}
+
+.image-container > figure > img {
+    width: 100%;
+}
+
+.float > p {
+   text-align: justify;
+    font-size: 20px;   
+}
+
+#name {
+    width: 150px;
+    
+}
+
+.name {
+    display: flex;
 }
