@@ -5,36 +5,56 @@
     list-style-type: none;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 #banniere {
     background-color:#1E1E1E ;
     justify-content: center;
     display: flex ;
-    
 }
 
-
+li , ul {
+    text-decoration: none;
+}
 
 .flex {
     display: flex;
     list-style-type: none;
-    justify-content: space-between;
-    
+    justify-content: space-between; 
 }
 
 .menu {
     position: absolute;
-    
     left: 0;
-    top: 75px;
-    
-    
-    
+    top: 75px;    
+}
+
+.menu > ul > li > ul > li > a {
+    color:rgb(155, 153, 153) ;
+}
+
+
+.menu > ul > li > ul > li:hover > a {
+    color: white;
+}
+
+
+.menu > ul > li > ul > li {
+    margin: 9px;
+    text-transform:none;
+
+}
+
+.menu > ul > li:hover > a {
+    color: rgb(255, 255, 255);
+
 }
 
 .menu > ul > li > a {
-    color: rgb(255, 255, 255);
-    
-
+    color: rgb(155, 153, 153);
 }
 
 
@@ -83,11 +103,13 @@
 .image-container {
     display: flex;
     flex-direction: row; 
-     
+    margin: 5px;
+   align-items: center;
 }
 
 .image-container img {
     width: 50%;
+    filter: none;
     margin-bottom: 10px; 
     border-radius: 5px;
 }
@@ -95,13 +117,13 @@
 .floating {
     font-size: 30px;
     display:grid;
-    margin: 15px;
+    margin: 5px;
     width: 45%;
     
     
  }
  
- h4 {
+ .image-container > .floating > h1 {
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(255, 255, 255);
    text-decoration: underline;
@@ -115,11 +137,12 @@
  }
 
  .footer-reseaux {
-    
     justify-content: center;
  }
 
  .footer-reseaux img{
+    position: relative;
+    bottom: 45px;
     width:15px }
 
 .footer > ul > a {
@@ -158,7 +181,7 @@
 
  img[alt~="logo"]{
     position: relative;
-    bottom: 59px;
+    bottom: 80px;
     height: 50px;
     width: auto;
   
@@ -182,6 +205,8 @@
     display: flex;
 } 
 
+
+
 .floating > h6 {
     color: white;
     text-decoration: underline;
@@ -199,7 +224,7 @@ section > h2  {
     text-align: center;
     font-style: italic ;
     padding-top: 15px;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
    
 }
 
@@ -215,9 +240,7 @@ section > p {
 
 }
 
-.image-container > figure > img {
-    width: 100%;
-}
+
 
 
 .healing {
@@ -229,16 +252,17 @@ section > p {
     grid-template-columns: repeat(2, 1fr);  
 }
 
-.image-left {
+#image-left {
     grid-column: 1; 
 }
 
-.image-right {
+#image-right {
     grid-column: 2;
 }
 
 .float {
     padding: 15px; 
+   
 }
 
 
@@ -303,10 +327,11 @@ iframe {
 
 .info {
     position: relative;
-    top: 350px;
+    top: 460px;
     left: 25px;
     font-family: Arial, Helvetica, sans-serif;
     width: 300px;
+    font-size: 22px;
     
 }
 
@@ -315,7 +340,7 @@ iframe {
     font-size: 25px;
     width: 300px;
     position: relative;
-    top: 110px;
+    top: 75px;
     left: 25px;
 }
 
@@ -335,39 +360,35 @@ iframe {
 }
 
 @media (max-width: 600px) {
-    .formulaire ,  .question , .contact-us {
-        padding: 10px; 
+    .form-container, .question, .contact-us, .info {
+        width: 100%;
+        padding: 10px;
+        left: 0;
+        top: 0;
     }
 }
-
 
 @media (min-width: 601px) and (max-width: 900px) {
-    .form-container , .question , .contact-us{
-        max-width: 80%; 
+    .form-container, .question, .contact-us, .info {
+        max-width: 80%;
     }
 }
 
-
-@media (min-width: 901px) {
-    .form-container,  .question , .contact-us {
-        max-width: 600px; 
-    }
-}
 
 /* About */
 
+img {
+    border-radius: 5px;
+}
 
 .intro {
     justify-content: left;
-    margin: 15px  ;
-    width: auto;
+    margin: 15px  ;  
+    
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
 }
 
-span {
-    display: block;
-}
 
 .design {
     margin: 15px ;
@@ -378,7 +399,44 @@ span {
 }
 
 .search , .day , .after , .recommendation {
-   display: flex;
    margin: 15px;
-   max-width: 1000px;
+   max-width: 1500px;
+   display: flex;
+   overflow: hidden;
+}
+
+.search , .day , .after , .recommendation {
+    margin: 15px ;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+/* FAQ */
+
+.faq {
+    font-size: 23px;
+    display: block;
+    margin: 15px;
+    justify-content: start;
+    text-align: center;
+}
+
+.faq > h4 {
+    margin-bottom: 25px;
+    color: black;
+}
+
+.faq > h4 , p {
+    margin: 25px;
+}
+
+/* symbolic tattoo */
+
+h2 {
+    margin: 15px;
+}
+
+.float > h3  {
+   font-family: Arial, Helvetica, sans-serif;
+   text-decoration: underline;
 }
