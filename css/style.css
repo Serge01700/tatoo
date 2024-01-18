@@ -15,6 +15,12 @@ a {
     justify-content: center;
     display: flex ;
 }
+#menuB {
+    position:absolute;
+    right: 5px;
+    top: 50px;
+    background-color: rgb(143, 133, 133);
+}
 
 li , ul {
     text-decoration: none;
@@ -31,21 +37,69 @@ li , ul {
     left: 0;
     top: 75px;    
 }
+ul {
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#banniere > ul , li {
+    margin:15px
+}
+
+#menuList > li > ul {
+    display: none;
+}
+
+#menuList > li:hover > ul {
+    display: block;
+}
+
+#menuList > li:hover {
+    color: white;
+}
+
+#menuList > li > ul > li > a {
+    display: block;
+    color: white;
+    margin: 15px;
+}
+
+#menuList > li > a {
+    color: rgb(155, 153, 153);
+    
+}
+
+#menuList > li:hover > a {
+    color:white;
+}
+
+#banniere > ul > ul {
+    position: absolute;
+    right: 10px;
+    top: 100px;
+    display: none;
+    background-color:#1E1E1E;
+    z-index: 80;
+    width: 250px;
+    color:rgb(155, 153, 153)
+}
+
+#banniere > ul > li:hover > ul,
+#banniere > ul > ul.show {
+    display: block;
+}
 
 .menu > ul > li > ul > li > a {
     color:rgb(155, 153, 153) ;
 }
 
-
 .menu > ul > li > ul > li:hover > a {
     color: white;
 }
 
-
 .menu > ul > li > ul > li {
     margin: 9px;
     text-transform:none;
-
 }
 
 .menu > ul > li:hover > a {
@@ -53,11 +107,24 @@ li , ul {
 
 }
 
+.footer > ul > li > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
 .menu > ul > li > a {
     color: rgb(155, 153, 153);
 }
 
-
+html > body > section > .block {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 .menu > ul > li {
     margin : 0 20px;
     font-family: Arial, Helvetica, sans-serif;
@@ -79,9 +146,9 @@ li , ul {
     top:22px;
     background-color: #1E1E1E;
     width: 150px;
-    
-
 }
+
+
 .block > .art {
     padding: 15px;
     font-family: Arial, Helvetica, sans-serif;
@@ -89,43 +156,38 @@ li , ul {
     color: rgb(0, 0, 0);
     font-size: 25px;
     text-decoration: underline;
-    
 }
 
 .block  {
-    background-color: #cfcfcf;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     margin: 8px;
-
-   
 }
 
 .image-container {
-    display: flex;
-    flex-direction: row; 
     margin: 5px;
-   align-items: center;
 }
 
 .image-container img {
-    width: 50%;
-    filter: none;
-    margin-bottom: 10px; 
+    width: 100%;
+    filter: none;  
+    margin-top: 80px;
     border-radius: 5px;
 }
 
 .floating {
     font-size: 30px;
     display:grid;
-    margin: 5px;
-    width: 45%;
-    
-    
+    text-align: justify;
+    margin-left: 5px;
+    width: 75%;
  }
  
  .image-container > .floating > h1 {
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    
    text-decoration: underline;
  }
 
@@ -133,7 +195,6 @@ li , ul {
     background-color: #1E1E1E ;
     height: 145px;
     width: 100%;
-    
  }
 
  .footer-reseaux {
@@ -142,23 +203,19 @@ li , ul {
 
  .footer-reseaux img{
     position: relative;
-    bottom: 45px;
+    bottom: 100px;
     width:15px }
 
 .footer > ul > a {
     color: white;
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
-   
-    
 }
 
 .footer > ul {
     padding-top: 47px;
     display: flex;
     justify-content: center;
-    
-    
 }
 
 
@@ -166,8 +223,6 @@ li , ul {
     display: inline; 
     margin-right: 20px; 
 }
-
-
 
 .footer-reseaux {
     display: flex;
@@ -181,10 +236,9 @@ li , ul {
 
  img[alt~="logo"]{
     position: relative;
-    bottom: 80px;
+    bottom: 100px;
     height: 50px;
     width: auto;
-  
 }
 
 .cont > p {
@@ -205,8 +259,6 @@ li , ul {
     display: flex;
 } 
 
-
-
 .floating > h6 {
     color: white;
     text-decoration: underline;
@@ -217,7 +269,6 @@ li , ul {
     margin-bottom: 150px;
 }
 
-
 /* Top stories healing tattoo */
 
 section > h2  {
@@ -225,7 +276,6 @@ section > h2  {
     font-style: italic ;
     padding-top: 15px;
     font-family:Arial, Helvetica, sans-serif;
-   
 }
 
 hr{
@@ -237,53 +287,49 @@ section > p {
     text-align: center;
     margin: 10px 0 10px 80px; 
     font-size: 20px;
-
 }
-
-
-
-
 .healing {
     margin: 20px;
  }
 
  .image-container  {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);  
+    grid-template-columns: repeat(2, 1fr);    
 }
 
-#image-left {
+img[alt~="arbre"]{
     grid-column: 1; 
 }
 
-#image-right {
+img[alt~="oeil-horus"] {
     grid-column: 2;
 }
 
 .float {
     padding: 15px; 
-   
 }
-
-
 
 @media (max-width: 980px) {
     .image-container {
-        grid-template-columns: 1fr;    }
+        grid-template-columns: 2fr;    }
 }
 
 .float > p {
    text-align: justify;
+   position:relative;
+   bottom: 25px;
     font-size: 20px;   
 }
 
+.symbolic > .image-container > .float > p {
+    padding-bottom: 25px;
+    margin-bottom: 55px;
+}
 
 /* Contact */
 #name {
-    width: 150px; 
-    
+    width: 150px;   
 }
-
 
 .form {
     display: flex;
@@ -294,15 +340,13 @@ section > p {
 .formulaire > ul > li {
     margin: 5px;
     font-size: 19px;
-   
 }
 
 .form-container {
-    display: flex;
+    display:flex; 
     flex-direction: column;
     max-width: 600px;
-    margin: auto;
-    
+    margin: auto;  
 }
 
 input,
@@ -331,8 +375,7 @@ iframe {
     left: 25px;
     font-family: Arial, Helvetica, sans-serif;
     width: 300px;
-    font-size: 22px;
-    
+    font-size: 22px;  
 }
 
 .question {
@@ -343,7 +386,6 @@ iframe {
     top: 75px;
     left: 25px;
 }
-
 
 .contact-us > span {
     font-family: Arial, Helvetica, sans-serif;
@@ -360,7 +402,7 @@ iframe {
 }
 
 @media (max-width: 600px) {
-    .form-container, .question, .contact-us, .info {
+   .form-container, .question, .contact-us, .info {
         width: 100%;
         padding: 10px;
         left: 0;
@@ -374,69 +416,163 @@ iframe {
     }
 }
 
-
 /* About */
-
-img {
-    border-radius: 5px;
+.about {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-.intro {
-    justify-content: left;
-    margin: 15px  ;  
-    
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
+.intro p {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
 }
 
+.steps {
+    margin-top: 30px;
+}
 
-.design {
-    margin: 15px ;
-    display: flex;
-    width: 900px;
-    font-family: Arial, Helvetica, sans-serif;
+.steps h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.design,
+.search,
+.day,
+.after,
+.recommendation {
+    margin-top: 20px;
+}
+
+.design h3,
+.search h3,
+.day h3,
+.after h3,
+.recommendation h3 {
+    color: #333;
     font-size: 20px;
+    margin-bottom: 10px;
 }
 
-.search , .day , .after , .recommendation {
-   margin: 15px;
-   max-width: 1500px;
-   display: flex;
-   overflow: hidden;
+.design p,
+.search p,
+.day p,
+.after p,
+.recommendation p {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
 }
 
-.search , .day , .after , .recommendation {
-    margin: 15px ;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+.design figure,
+.search figure,
+.day figure,
+.after figure,
+.recommendation figure {
+    text-align: center;
+    margin-top: 10px;
 }
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+hr {
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.recommendation ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.recommendation li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #555;
+}
+
+
+
 
 /* FAQ */
 
 .faq {
-    font-size: 23px;
+    font-size: 23px; 
+    margin: 0 150px;
     display: block;
-    margin: 15px;
-    justify-content: start;
+    max-width: 800px;
     text-align: center;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq > h5 {
+    font-size: 25px;
+    text-decoration: underline;
+    color: #1E1E1E;
+    text-align: center;
+    font-weight:549;
 }
 
 .faq > h4 {
     margin-bottom: 25px;
-    color: black;
+    color: #1E1E1E;
+   
+    
 }
 
 .faq > h4 , p {
-    margin: 25px;
+    margin: 45px;
 }
 
 /* symbolic tattoo */
-
 h2 {
     margin: 15px;
 }
 
+
+
 .float > h3  {
    font-family: Arial, Helvetica, sans-serif;
    text-decoration: underline;
+  
 }
+
+
+@media only screen and (max-width: 600px) {
+    
+
+    body {
+        font-size: 14px;
+    }
+
+    .row-limit-size {
+        padding: 10px;
+    }
+
+   
+}
+
+/* Desktop */
+@media only screen and (min-width: 601px) {
+    
+    body {
+        font-size: 16px;
+    }
+
+    .row-limit-size {
+        padding: 20px;
+    } }
