@@ -331,8 +331,8 @@ html > body > section > .block {
 /* Top stories rap */
 
 .block > h2 {
-    /*padding: 15px 0;
-    text-decoration: underline;*/
+    padding: 15px 0;
+    text-decoration: underline;
     font-size: 24px;
     color: #333;
     margin-bottom: 15px;
